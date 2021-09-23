@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 
+import { toast } from 'react-toastify'
+
 import { API_URL, API_KEY } from '../config.js'
 import GoodsList from './GoodsList.jsx'
 import Loader from './Loader'
@@ -47,6 +49,7 @@ function Main() {
       })
       setOrder(newOrder)
     }
+    toast.success('Goods added!');
   }
 
   function addItem(items) {
@@ -81,6 +84,7 @@ function Main() {
   function deleteOrder(id) {
     const newOrder = order.filter(orderItem => orderItem.id !== id)
     setOrder(newOrder)
+    toast.error('Goods deleted!');
   }
  
 
