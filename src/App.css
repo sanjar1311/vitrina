@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav {
+  padding: 0 1.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content {
+  min-height: calc(100vh - 134px);
+  padding: 1.5rem 15px;
+}
+
+.goods {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card-el {
   display: flex;
   flex-direction: column;
+}
+.card-content {
+  flex-grow: 1;
+}
+.card-el__card-action {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.shopping-card-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
+.shopping-card-btn:active, .shopping-card-btn:focus {
+  background-color: transparent;
+}
+
+.cart {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  z-index: 5;
+  padding: 10px;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  background-color: dodgerblue;
+}
+
+.collection {
+  animation: show .5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.basket-list {
+  box-shadow: 0 6px 15px 0 rgba(0, 0, 0, .5);
+  position: fixed;
+  z-index: 10;
+  width: 67.5vw;
+  background-color: #fff;
+}
+
+.dblock {
+  display: block;
+}
+
+.collection-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.collection-item:last-child {
+  justify-content: flex-start;
+}
+
+.collection-item button {
+  margin-right: 5px;
+}
+
+.modal-close {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 15px;
+  font-weight: 700;
+  padding: 5px;
+  display: block;
+}
+
+.modal-close:active, .modal-close:focus {
+  background-color: transparent;
+  box-shadow: 0 0 3px rgb(9, 99, 189);
+}
+
+.empty {
+  margin: 10px;
+}
+
+@media (min-width: 767px) {
+  .cart {
+    top: 7rem;
+    bottom: unset;
+  }
+}
+
+@keyframes show {
   from {
-    transform: rotate(0deg);
+    transform: translateY(10vh);
+    opacity: 0.1;
   }
   to {
-    transform: rotate(360deg);
+    transform: translateY(0);
+    opacity: 1;
   }
 }
