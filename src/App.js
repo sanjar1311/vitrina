@@ -5,7 +5,6 @@ import { toast } from 'react-toastify'
 import { API_URL, API_KEY } from './config.js'
 import GoodsList from './Components/GoodsList'
 import Loader from './Components/Loader'
-import Cart from './Components/Cart'
 import OrderList from './Components/OrderList.jsx'
 
 import { ToastContainer } from 'react-toastify';
