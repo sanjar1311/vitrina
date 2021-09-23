@@ -117,10 +117,10 @@ nav {
   margin: 10px;
 }
 
-@media (min-width: 767px) {
-  .cart {
-    top: 7rem;
-    bottom: unset;
+
+@media (max-width: 500px) {
+  body {
+    margin-top: 80px;
   }
 }
 

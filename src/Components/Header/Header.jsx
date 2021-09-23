@@ -6,7 +6,7 @@ function Header({quantity, setShowOrder}) {
   return(
   <header className="header header--fixed">
     <div className="container header-inner">
-      <h2 className="site-title">React Shop</h2>
+      <h2 className="site-title">MaRKeT</h2>
       <div className="header__right-side">
         <Cart
           quantity={quantity}
