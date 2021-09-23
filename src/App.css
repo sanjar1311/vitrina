@@ -2,9 +2,14 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
+  margin-top: 91px;
 }
 
 nav {
@@ -46,16 +51,19 @@ nav {
 }
 
 .cart {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
   cursor: pointer;
-  z-index: 5;
-  padding: 10px;
+  padding: 5px;
   border: none;
   color: #fff;
   border-radius: 5px;
-  background-color: dodgerblue;
+}
+
+.cart i {
+  color: #777;
+}
+
+.cart span {
+  color: #777;
 }
 
 .collection {
