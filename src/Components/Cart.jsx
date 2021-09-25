@@ -1,6 +1,11 @@
-function Cart ({quantity, setShowOrder}) {
+import {useContext} from "react"
+import {ShopContext} from "../context"
+
+function Cart () {
+  const {setShowOrder, order} = useContext(ShopContext)
+  const quantity = order.length
   return(
-    <div className="cart " onClick={()=> setShowOrder(prev => prev = !prev)}>
+    <div className="cart " onClick={setShowOrder}>
       {/* <a class="btn-floating btn-large cyan pulse"><i class="material-icons">edit</i></a> */}
       <i className="material-icons">shopping_cart</i>
       {

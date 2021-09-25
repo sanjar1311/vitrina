@@ -1,5 +1,9 @@
+import {useContext} from 'react'
+import {ShopContext} from '../context'
+
 function OrderItem(props) {
-  const {name, price, quantity, id, addItem, deleteItems, deleteOrder} = props
+  const {name, price, id, quantity } = props
+  const { addItem, deleteItems, deleteOrder} = useContext(ShopContext)
 
   return(
     <li className="collection-item">
